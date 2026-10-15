@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Álcool ou Gasolina?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- TELA 1: formulário -->
+    <div class="tela ativa" id="tela-form">
+
+      <svg class="icone" viewBox="0 0 512 512" fill="none" stroke="currentColor"
+           stroke-width="26" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M110 60 H300 V450 H110 Z"/>
+        <path d="M140 100 H270 V200 H140 Z"/>
+        <path d="M70 450 H340"/>
+        <path d="M300 150 H350 Q400 150 400 200 V340 Q400 390 440 390 Q470 390 470 350 V200 L420 150"/>
+      </svg>
+
+      <h1>Álcool ou Gasolina?</h1>
+
+      <div class="campo">
+        <label for="alcool">Preço do álcool (R$/litro)</label>
+        <input type="text" id="alcool" inputmode="decimal" placeholder="Ex.: 4,19">
+      </div>
+
+      <div class="campo">
+        <label for="gasolina">Preço da gasolina (R$/litro)</label>
+        <input type="text" id="gasolina" inputmode="decimal" placeholder="Ex.: 6,29">
+      </div>
+
+      <p class="erro" id="erro" role="alert"></p>
+
+      <button type="button" id="btn-calcular">Calcular</button>
+      <button type="button" id="btn-regra" class="secundario">Como funciona?</button>
+    </div>
+
+    <!-- TELA 2: resultado -->
+    <div class="tela" id="tela-resultado">
+      <p id="posto"></p>
+      <p id="titulo-resultado">Abasteça com</p>
+      <p id="valor-combustivel"></p>
+      <p id="formula"></p>
+      <button type="button" id="btn-voltar">Calcular novamente</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
